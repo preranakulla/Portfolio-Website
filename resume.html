@@ -3,74 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume</title>
+<title>Prerana Kulla | Resume</title>
 
 <style>
-body {
+  /* Global Styles */
+  body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-}
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+  }
 
-nav {
-    background-color: #1f2a44;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 20px;
+  a {
+    color: #4da6ff; /* light blue accent */
     text-decoration: none;
-    font-weight: bold;
-}
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-.container {
+  /* Navigation */
+  nav {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  nav a {
+    color: #222;
+  }
+
+  /* Container */
+  .container {
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
-    background-color: white;
-}
+    padding: 2rem;
+  }
 
-h1 {
-    color: #1f2a44;
-}
+  h1, h2, h3 {
+    color: #4da6ff; /* light blue headers */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p, li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+
+  .resume-section {
+    margin-bottom: 2rem;
+  }
+
+  .resume-section table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .resume-section th, .resume-section td {
+    text-align: left;
+    padding: 0.3rem 0;
+    vertical-align: top;
+  }
+
+  .resume-section th {
+    width: 150px;
+    color: #4da6ff;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+  }
+
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
 <nav>
-    <a href="index.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="research.html">Research</a>
+  <a href="index.html">About Me</a>
+  <a href="resume.html">Resume</a>
+  <a href="research.html">Research</a>
 </nav>
 
 <div class="container">
-    <h1>Resume</h1>
 
-    <p>You can either paste your resume here OR upload a PDF and link it.</p>
+  <!-- Header / Contact Info -->
+  <h1>Prerana Kulla</h1>
+  <div class="contact-info">
+    <p>kullaprerana@gmail.com | kprerana@unc.edu | (704) 806-3408</p>
+    <p><a href="https://www.linkedin.com/in/prerana-kulla" target="_blank">LinkedIn</a></p>
+    <p><a href="file:///Users/preranakulla/Downloads/Prerana%20Resume.pdf" target="_blank">Download PDF Resume</a></p>
+  </div>
 
+  <!-- EDUCATION -->
+  <div class="resume-section">
     <h2>Education</h2>
-    <p>University Name — Major, Minor (Expected Graduation)</p>
+    <table>
+      <tr>
+        <th>North Carolina School of Science and Mathematics – Morganton, NC</th>
+        <td>GPA: 5.0</td>
+      </tr>
+      <tr>
+        <th>University of North Carolina at Chapel Hill – Chapel Hill, NC</th>
+        <td>Community and Global Public Health; Neuroscience; Business Administration (Minor)<br>Expected May 2029</td>
+      </tr>
+    </table>
+  </div>
 
-    <h2>Experience</h2>
-    <ul>
-        <li>Position — Organization — Year</li>
-    </ul>
+  <!-- RESEARCH EXPERIENCE -->
+  <div class="resume-section">
+    <h2>Research Experience</h2>
+    <table>
+      <tr>
+        <th>Menstrual Pad Fibrous Plant Project</th>
+        <td>
+          Utilized enzymatic and chemical delignification methods for decentralized production of absorbent materials.<br>
+          Collected datasets on cellulose, hemicellulose, lignin, moisture content and built a multivariate polynomial regression model.<br>
+          Produced fibrous pads from pineapple and sisal leaves using delignification and mechanical fluffing.
+        </td>
+      </tr>
+      <tr>
+        <th>Cellulose Biodegradability Study</th>
+        <td>
+          Studied impact of water, algae, alcohol, and oil-based inks on cellulose biodegradability using fungi culturing techniques.
+        </td>
+      </tr>
+      <tr>
+        <th>Nanofiber Vaccine Design | Duke Research</th>
+        <td>
+          Synthesized supramolecular nanofibers for sublingual gonorrhea vaccines.<br>
+          Conducted peptide synthesis purification, nanofiber characterization, and mucoadhesion analysis.
+        </td>
+      </tr>
+    </table>
+  </div>
 
-    <h2>Leadership & Service</h2>
-    <ul>
-        <li>Example leadership role</li>
-    </ul>
+  <!-- LEADERSHIP & COMMUNITY -->
+  <div class="resume-section">
+    <h2>Leadership & Community</h2>
+    <table>
+      <tr>
+        <th>Strive2Thrive Edu – Charlotte, NC</th>
+        <td>Tutor & Project Coordinator — Taught computing basics and biology to children in Uganda and Zambia.</td>
+      </tr>
+      <tr>
+        <th>MediLink – Charlotte, NC</th>
+        <td>Founder & CEO — Non-profit combining business/economics/finance with medical healthcare to train young entrepreneurs.</td>
+      </tr>
+      <tr>
+        <th>Menstrual Movement in Morganton – Morganton, NC</th>
+        <td>Founder — Organized feminine product drives supporting 4,000+ women. Published Red Ribbon outreach materials for menstruating girls.</td>
+      </tr>
+    </table>
+  </div>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Research Methods</li>
-        <li>Data Analysis</li>
-        <li>Community Outreach</li>
-    </ul>
-</div>
-
-</body>
-</html>
+  <!-- WORK EXPERIENCE -->
+  <div class="resume-section">
+    <h2>Work Experience</h2>
+    <table>
+      <tr>
+        <th>UNC ResNET IT Services – Chapel Hill, NC</th>
+        <td>Residential Computing Consultant — Provide in-room technical support for UNC residential students.</td>
+      </tr>
+      <tr>
+        <th>Kumon – Harrisburg, NC</th>
