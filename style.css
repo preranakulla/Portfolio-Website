@@ -2,119 +2,107 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #333;
   background-color: #fff;
-  display: flex;
+  display: flex; /* Sidebar and Main side-by-side */
+  min-height: 100vh;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 260px;
   background-color: #f8f9fa;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centers the rectangle image and name */
   border-right: 1px solid #eee;
-  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
-.sidebar img {
-  width: 120px;
-  height: 170px;
-  /* border-radius: 50%; */
-  margin-bottom: 1rem;
+/* RECTANGLE IMAGE: Length longer than width */
+.profile-img {
+  width: 160px;      /* Width */
+  height: 220px;     /* Longer Length */
+  object-fit: cover; /* Ensures image isn't stretched */
+  border-radius: 4px; /* Slight rounding for a professional look */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.sidebar h1 {
-  font-size: 1.5rem;
-  color: #4da6ff;
-  margin: 0.5rem 0;
+.sidebar-name {
+  font-size: 1.6rem;
+  color: #4B9CD3; /* Carolina Blue */
+  margin: 0 0 1.5rem 0;
   text-align: center;
 }
 
-.sidebar nav {
-  margin-top: 2rem;
+.contact-info {
+  width: 100%;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 0.7rem;
 }
 
-.sidebar nav a {
-  color: #222;
-  padding: 0.5rem 0;
+.contact-item {
   text-decoration: none;
-  font-weight: bold;
+  color: #555;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Horizontal Top Menu */
+.top-menu {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
   transition: color 0.2s;
 }
 
-.sidebar nav a:hover {
-  color: #4da6ff;
+.top-menu a:hover, .top-menu a.active {
+  color: #4B9CD3;
 }
 
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 2rem 3rem;
-  max-width: 900px;
+.top-menu a.active {
+  border-bottom: 2px solid #4B9CD3;
 }
 
-/* Headers */
-h1, h2, h3 {
-  color: #4da6ff;
+/* Page Content */
+.content-section {
+  padding: 2rem 4rem;
+  max-width: 850px;
+}
+
+h2 {
+  color: #4B9CD3;
   margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
-/* Resume Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-th {
-  text-align: left;
-  color: #4da6ff;
-  vertical-align: top;
-  width: 180px;
-  padding-right: 1rem;
-}
-
-td {
-  padding-bottom: 0.8rem;
-}
-
-/* Lists */
-ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 1rem;
-}
-
-/* Responsive */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    border-right: none;
+  body { flex-direction: column; }
+  .sidebar { 
+    width: 100%; 
+    height: auto; 
+    position: static; 
+    border-right: none; 
     border-bottom: 1px solid #eee;
   }
-  .sidebar nav {
-    flex-direction: row;
-    gap: 1rem;
-  }
+  .top-menu { justify-content: center; padding: 1rem; }
+  .content-section { padding: 2rem; }
 }
