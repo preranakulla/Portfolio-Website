@@ -1,128 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prerana Kulla | Resume</title>
-<meta name="description" content="Resume and portfolio of Prerana Kulla, undergraduate at UNC Chapel Hill. Research, leadership, and professional experience.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Prerana Kulla</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <img src="profile.jpg" alt="Prerana Kulla">
-  <h1>Prerana Kulla</h1>
-  <nav>
-    <a href="index.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="research.html">Research</a>
-  </nav>
-</div>
+  <aside class="sidebar">
+    <img src="profile.jpg" alt="Prerana Kulla" class="profile-img">
+    
+    <div class="profile-header">
+      <h1 class="sidebar-name">Prerana Kulla</h1>
+      <p class="subtitle">Undergraduate Student, UNC Chapel Hill</p>
+    </div>
+    
+    <div class="contact-list">
+      <div class="contact-item">
+        <span class="icon">📍</span> Chapel Hill & Charlotte, NC
+      </div>
+      <a href="mailto:kullaprerana@gmail.com" class="contact-item">
+        <span class="icon">✉</span> Email
+      </a>
+      <a href="https://www.linkedin.com/in/prerana-kulla" target="_blank" class="contact-item">
+        <span class="icon">🔗</span> LinkedIn
+      </a>
+    </div>
+  </aside>
 
-<!-- Main Content -->
-<div class="main-content">
+  <main class="main-content">
+    <nav class="top-menu">
+      <div class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="research.html">Research</a>
+      </div>
+      <a href="index.html" class="nav-name-link">Prerana Kulla</a>
+    </nav>
 
-  <!-- Contact Info / PDF -->
-  <h2>Contact & Resume</h2>
-  <p>Email: <a href="mailto:kullaprerana@gmail.com">kullaprerana@gmail.com</a> | <a href="mailto:kprerana@unc.edu">kprerana@unc.edu</a></p>
-  <p>Phone: (704) 806-3408</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/prerana-kulla" target="_blank">linkedin.com/in/prerana-kulla</a></p>
-  <p><a href="Prerana_Resume.pdf" target="_blank">Download PDF Resume</a></p>
+    <div class="content-body">
+      <div class="resume-header-row">
+        <h1>Resume</h1>
+        <a href="Prerana Resume.pdf" target="_blank" class="download-button">Download PDF</a>
+      </div>
 
-  <!-- Education -->
-  <div class="resume-section">
-    <h2>Education</h2>
-    <table>
-      <tr>
-        <th>North Carolina School of Science and Mathematics – Morganton, NC</th>
-        <td>GPA: 5.0</td>
-      </tr>
-      <tr>
-        <th>University of North Carolina at Chapel Hill – Chapel Hill, NC</th>
-        <td>Community and Global Public Health; Neuroscience; Business Administration (Minor)<br>Expected May 2029</td>
-      </tr>
-    </table>
-  </div>
+      <section class="resume-section">
+        <h2>Education</h2>
+        <div class="resume-item">
+          <div class="resume-row">
+            <strong>University of North Carolina at Chapel Hill</strong>
+            <span class="resume-date">Expected May 2029</span>
+          </div>
+          <p>Community and Global Public Health; Neuroscience; Business Administration (Minor)</p>
+        </div>
+        <div class="resume-item">
+          <div class="resume-row">
+            <strong>North Carolina School of Science and Mathematics</strong>
+            <span class="resume-date">GPA: 5.0</span>
+          </div>
+        </div>
+      </section>
 
-  <!-- Research Experience -->
-  <div class="resume-section">
-    <h2>Research Experience</h2>
-    <table>
-      <tr>
-        <th>Menstrual Pad Fibrous Plant Project</th>
-        <td>
-          Utilized enzymatic and chemical delignification methods for decentralized production of absorbent materials.<br>
-          Collected datasets on cellulose, hemicellulose, lignin, moisture content and built a multivariate polynomial regression model.<br>
-          Produced fibrous pads from pineapple and sisal leaves using delignification and mechanical fluffing.
-        </td>
-      </tr>
-      <tr>
-        <th>Cellulose Biodegradability Study</th>
-        <td>
-          Studied impact of water, algae, alcohol, and oil-based inks on cellulose biodegradability using fungi culturing techniques.
-        </td>
-      </tr>
-      <tr>
-        <th>Nanofiber Vaccine Design | Duke Research</th>
-        <td>
-          Synthesized supramolecular nanofibers for sublingual gonorrhea vaccines.<br>
-          Conducted peptide synthesis purification, nanofiber characterization, and mucoadhesion analysis.
-        </td>
-      </tr>
-    </table>
-  </div>
+      <section class="resume-section">
+        <h2>Research Experience</h2>
+        <div class="resume-item">
+          <strong>Nanofiber Vaccine Design | Duke Research</strong>
+          <ul>
+            <li>Synthesized supramolecular nanofibers for sublingual gonorrhea vaccines.</li>
+            <li>Conducted peptide synthesis purification and nanofiber characterization.</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <strong>Menstrual Pad Fibrous Plant Project</strong>
+          <ul>
+            <li>Utilized enzymatic and chemical delignification methods for decentralized production of absorbent materials.</li>
+            <li>Built a multivariate polynomial regression model based on cellulose and lignin datasets.</li>
+          </ul>
+        </div>
+      </section>
 
-  <!-- Leadership & Community -->
-  <div class="resume-section">
-    <h2>Leadership & Community</h2>
-    <table>
-      <tr>
-        <th>Strive2Thrive Edu – Charlotte, NC</th>
-        <td>Tutor & Project Coordinator — Taught computing basics and biology to children in Uganda and Zambia.</td>
-      </tr>
-      <tr>
-        <th>MediLink – Charlotte, NC</th>
-        <td>Founder & CEO — Non-profit combining business/economics/finance with medical healthcare to train young entrepreneurs.</td>
-      </tr>
-      <tr>
-        <th>Menstrual Movement in Morganton – Morganton, NC</th>
-        <td>Founder — Organized feminine product drives supporting 4,000+ women. Published Red Ribbon outreach materials for menstruating girls.</td>
-      </tr>
-    </table>
-  </div>
+      <section class="resume-section">
+        <h2>Leadership & Community</h2>
+        <div class="resume-item">
+          <strong>MediLink | Founder & CEO</strong>
+          <p>Non-profit training young entrepreneurs by combining business and healthcare education.</p>
+        </div>
+        <div class="resume-item">
+          <strong>Strive2Thrive Edu | Project Coordinator</strong>
+          <p>Taught computing basics and biology to children in Uganda and Zambia.</p>
+        </div>
+      </section>
 
-  <!-- Work Experience -->
-  <div class="resume-section">
-    <h2>Work Experience</h2>
-    <table>
-      <tr>
-        <th>UNC ResNET IT Services – Chapel Hill, NC</th>
-        <td>Residential Computing Consultant — Provide in-room technical support for UNC residential students.</td>
-      </tr>
-      <tr>
-        <th>Kumon – Harrisburg, NC</th>
-        <td>Tutor — Provided comprehensive tutoring in mathematics and reading to students across various age groups.</td>
-      </tr>
-    </table>
-  </div>
+      <section class="resume-section">
+        <h2>Skills</h2>
+        <p><strong>Technical:</strong> Data analysis, microscopy, spectroscopy, HPLC, TEM, Excel, Python basics</p>
+        <p><strong>Certifications:</strong> NC EMT Certification</p>
+      </section>
 
-  <!-- Skills & Additional Info -->
-  <div class="resume-section">
-    <h2>Skills & Coursework</h2>
-    <ul>
-      <li>Relevant Coursework: Accelerated Research Program, Research in Biology, Student Government Association Election Director</li>
-      <li>NC EMT Certification</li>
-      <li>Technical Skills: Data analysis, microscopy, spectroscopy, HPLC, TEM, Excel, Python basics</li>
-    </ul>
-  </div>
-
-</div> <!-- end main-content -->
-
-<footer>
-  © 2026 Prerana Kulla
-</footer>
+    </div>
+  </main>
 
 </body>
 </html>
