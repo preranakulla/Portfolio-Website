@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-}
-
-nav {
-    background-color: #1f2a44;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    background-color: white;
-}
-
-h1 {
-    color: #1f2a44;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Prerana Kulla</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-    <a href="index.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="research.html">Research</a>
-</nav>
+  <aside class="sidebar">
+    <img src="profile.jpg" alt="Prerana Kulla" class="profile-img">
+    
+    <div class="profile-header">
+      <h1 class="sidebar-name">Prerana Kulla</h1>
+      <p class="subtitle">Undergraduate Student, UNC Chapel Hill</p>
+    </div>
+    
+    <div class="contact-list">
+      <div class="contact-item">
+        <span class="icon">📍</span> Chapel Hill & Charlotte, NC
+      </div>
+      <a href="mailto:kullaprerana@gmail.com" class="contact-item">
+        <span class="icon">✉</span> Email
+      </a>
+      <a href="https://www.linkedin.com/in/prerana-kulla" target="_blank" class="contact-item">
+        <span class="icon">🔗</span> LinkedIn
+      </a>
+    </div>
+  </aside>
 
-<div class="container">
-    <h1>Research</h1>
+  <main class="main-content">
+    <nav class="top-menu">
+      <div class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="resume.html">Resume</a>
+        <a href="research.html" class="active">Research</a>
+      </div>
+      <a href="index.html" class="nav-name-link">Prerana Kulla</a>
+    </nav>
 
-    <h2>Project Title</h2>
-    <p>
-        Brief description of your research project, goals, and impact.
-    </p>
+    <div class="content-body">
+      <h1>Research</h1>
+      
+      <section class="research-project">
+        <h2>Schiller Lab</h2>
+        <p><strong>Undergraduate Research Assistant</strong></p>
+        <p>Currently assisting in neuroscience research projects focused on [Insert Specific Topic]. My work involves [Insert Task, e.g., data analysis, participant screening, or literature reviews].</p>
+      </section>
 
-    <h2>Publications / Presentations</h2>
-    <ul>
-        <li>Example conference or paper</li>
-    </ul>
-
-</div>
-
+      <section class="research-project">
+        <h2>Vaccine Nanofibers & Menstrual Health</h2>
+        <p>Investigated the development of biodegradable menstrual pads and vaccine delivery systems using nanofibers. This work focused on [Insert Brief Goal].</p>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
