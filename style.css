@@ -1,4 +1,4 @@
-/* Layout Consistency */
+/* Layout Global */
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -10,50 +10,45 @@ body {
 /* Sidebar Styling */
 .sidebar {
   width: 280px;
-  background-color: #f8f9fa; /* Light grey background for the sidebar */
+  background-color: #ffffff;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image and name */
   border-right: 1px solid #f0f0f0;
   position: sticky;
   top: 0;
   height: 100vh;
 }
 
-/* PORTRAIT RECTANGLE IMAGE */
+/* RECTANGLE PROFILE IMAGE */
 .profile-img {
-  width: 180px;      /* Fixed width */
-  height: 250px;     /* Longer height for portrait look */
-  object-fit: cover; /* Prevents squishing */
-  border-radius: 8px; /* Soft rounded corners */
+  width: 100%;
+  max-width: 200px;
+  height: 260px; /* Portrait length */
+  object-fit: cover;
+  border-radius: 4px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .sidebar-name {
   font-size: 1.8rem;
-  color: #4B9CD3; /* Carolina Blue */
-  margin-bottom: 2rem;
-  text-align: center;
+  margin: 0;
+  color: #222;
+  font-weight: 700;
 }
 
-/* Contact List Styling */
-.contact-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  padding-left: 10px; /* Aligns list more naturally */
+.subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.4;
 }
 
-/* Sidebar Contact List */
+/* Contact List (Larry Han Style) */
 .contact-list {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  padding-left: 10px;
+  gap: 1rem;
 }
 
 .contact-item {
@@ -61,22 +56,23 @@ body {
   color: #444;
   font-size: 1rem;
   display: flex;
-  align-items: flex-start; /* Aligns icon with the top of the text */
-  line-height: 1.4;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+  color: #4B9CD3; /* UNC Blue */
 }
 
 .icon {
-  margin-right: 12px;
+  width: 25px;
+  margin-right: 10px;
   font-size: 1.1rem;
-  min-width: 20px; /* Keeps the icon from squishing if text is long */
+  display: inline-block;
   text-align: center;
 }
 
-/* Main Content Area */
-.main-content {
-  flex: 1;
-}
-
+/* Horizontal Top Menu */
 .top-menu {
   padding: 1.5rem 3rem;
   border-bottom: 1px solid #eee;
@@ -88,15 +84,21 @@ body {
   text-decoration: none;
   color: #666;
   font-weight: 600;
-  font-size: 1rem;
 }
 
 .top-menu a.active {
   color: #222;
-  border-bottom: 2px solid #4B9CD3; /* Highlight active tab */
+  border-bottom: 2px solid #4B9CD3;
 }
 
 .content-body {
   padding: 2rem 4rem;
-  max-width: 850px;
+  max-width: 800px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid #eee; }
+  .top-menu { justify-content: center; }
 }
