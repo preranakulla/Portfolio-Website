@@ -1,4 +1,4 @@
-/* ===== Global Layout ===== */
+/* Layout Global */
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7,16 +7,16 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Sidebar - Locked Size ===== */
+/* Sidebar - Strictly Uniform */
 .sidebar {
   width: 280px; 
-  min-width: 280px; /* Prevents sidebar from shrinking */
+  min-width: 280px; 
   background-color: #ffffff;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #f0f0f0;
-  position: sticky; /* Keeps bio visible while scrolling */
+  position: sticky;
   top: 0;
   height: 100vh;
   box-sizing: border-box;
@@ -24,28 +24,26 @@ body {
 
 .profile-img {
   width: 100%;
-  height: 260px; /* Portrait rectangle ratio */
+  height: 260px; 
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .sidebar-name {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Uniform size */
   margin: 0;
   color: #222;
   font-weight: 700;
 }
 
 .subtitle {
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* Uniform size */
   color: #666;
   margin: 0.5rem 0 2rem 0;
   line-height: 1.4;
 }
 
-/* Contact List Styling */
 .contact-list {
   display: flex;
   flex-direction: column;
@@ -55,29 +53,23 @@ body {
 .contact-item {
   text-decoration: none;
   color: #444;
-  font-size: 0.95rem;
+  font-size: 0.95rem; /* Uniform size */
   display: flex;
   align-items: center;
-  transition: color 0.2s ease;
-}
-
-.contact-item:hover {
-  color: #4B9CD3; /* Carolina Blue */
 }
 
 .icon {
   width: 24px;
   margin-right: 10px;
   text-align: center;
-  font-size: 1.1rem;
 }
 
-/* ===== Top Menu Styling ===== */
+/* Top Menu */
 .top-menu {
   padding: 1.5rem 3rem;
   border-bottom: 1px solid #eee;
   display: flex;
-  justify-content: space-between; /* Links on left, Name on right */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -89,10 +81,6 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s;
-}
-
-.nav-links a {
   color: #666;
 }
 
@@ -101,47 +89,13 @@ body {
   border-bottom: 2px solid #4B9CD3;
 }
 
-/* Top Right Name Link (Grey) */
 .nav-name-link {
   color: #999;
   font-size: 0.95rem;
   font-weight: 400 !important;
 }
 
-.nav-name-link:hover {
-  color: #666;
-}
-
-/* ===== Main Content Body ===== */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .content-body {
   padding: 2.5rem 4rem;
-  max-width: 850px;
+  max-width: 800px;
 }
-
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: #222;
-}
-
-h2 {
-  color: #4B9CD3;
-}
-
-p {
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-
-/* ===== Resume & Research Specifics ===== */
-.resume-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin
