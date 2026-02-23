@@ -1,31 +1,95 @@
-/* Resume Specific Styling */
-.resume-item {
+/* Layout Consistency */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background-color: #f8f9fa; /* Light grey background for the sidebar */
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image and name */
+  border-right: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* PORTRAIT RECTANGLE IMAGE */
+.profile-img {
+  width: 180px;      /* Fixed width */
+  height: 250px;     /* Longer height for portrait look */
+  object-fit: cover; /* Prevents squishing */
+  border-radius: 8px; /* Soft rounded corners */
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.resume-item strong {
-  display: block;
-  font-size: 1.1rem;
-  color: #222;
+.sidebar-name {
+  font-size: 1.8rem;
+  color: #4B9CD3; /* Carolina Blue */
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.resume-item p {
-  margin: 0.2rem 0;
-  color: #555;
+/* Contact List Styling */
+.contact-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-left: 10px; /* Aligns list more naturally */
 }
 
-.download-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4B9CD3; /* Carolina Blue */
-  color: white;
+.contact-item {
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: background-color 0.2s;
+  color: #444;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
 }
 
-.download-btn:hover {
-  background-color: #357abd;
+.contact-item:hover {
+  color: #4B9CD3;
+}
+
+.icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+}
+
+.top-menu {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.top-menu a.active {
+  color: #222;
+  border-bottom: 2px solid #4B9CD3; /* Highlight active tab */
+}
+
+.content-body {
+  padding: 2rem 4rem;
+  max-width: 850px;
 }
