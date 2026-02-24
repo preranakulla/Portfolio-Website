@@ -10,13 +10,13 @@ body {
 /* ===== Sidebar - Locked & Uniform ===== */
 .sidebar {
   width: 280px; 
-  min-width: 280px; /* Forces sidebar to never shrink */
+  min-width: 280px; /* Forces sidebar to stay exactly 280px wide */
   background-color: #ffffff;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #f0f0f0;
-  position: sticky; /* Sidebar stays put while you scroll */
+  position: sticky; /* Keeps bio visible while you scroll */
   top: 0;
   height: 100vh;
   box-sizing: border-box;
@@ -44,11 +44,11 @@ body {
   line-height: 1.4;
 }
 
-/* Contact List - Fixed Stacking */
+/* Contact List - Clean Vertical Stacking */
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* This creates the space between Location, Email, and LinkedIn */
+  gap: 1.2rem; /* Creates the space between Location, Email, and LinkedIn */
   margin-top: 1rem;
 }
 
@@ -62,11 +62,11 @@ body {
 }
 
 .contact-item:hover {
-  color: #4B9CD3; /* UNC Blue highlight */
+  color: #4B9CD3; /* Carolina Blue highlight */
 }
 
 .icon {
-  width: 28px; /* Fixed width so all text starts at the same vertical line */
+  width: 28px; /* Fixed width so icons align and text starts at same line */
   margin-right: 10px;
   text-align: center;
   font-size: 1.1rem;
@@ -77,7 +77,7 @@ body {
   padding: 1.5rem 3rem;
   border-bottom: 1px solid #eee;
   display: flex;
-  justify-content: space-between; /* Links on left, Name on right */
+  justify-content: flex-start; /* Links stay on the left */
   align-items: center;
 }
 
@@ -89,27 +89,13 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s;
-}
-
-.nav-links a {
   color: #666;
+  transition: color 0.2s;
 }
 
 .nav-links a.active {
   color: #222;
   border-bottom: 2px solid #4B9CD3;
-}
-
-/* Top Right Name Link */
-.nav-name-link {
-  color: #999;
-  font-size: 0.95rem;
-  font-weight: 400 !important;
-}
-
-.nav-name-link:hover {
-  color: #666;
 }
 
 /* ===== Main Content Area ===== */
@@ -121,7 +107,6 @@ body {
 
 .content-body {
   padding: 2.5rem 4rem;
-  max-width: 850px;
 }
 
 h1 {
@@ -130,9 +115,78 @@ h1 {
   color: #222;
 }
 
+/* Narrowing text for better readability */
+.intro-text {
+  max-width: 700px;
+  line-height: 1.7;
+}
+
 p {
-  line-height: 1.6;
   margin-bottom: 1.2rem;
+}
+
+/* ===== Resume & Research Layouts ===== */
+.resume-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4B9CD3;
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.resume-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.resume-item ul {
+  margin: 8px 0;
+  padding-left: 1.2rem;
+}
+
+.download-button {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #4B9CD3;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #4B9CD3;
+  transition: all 0.2s;
+}
+
+.download-button:hover {
+  background-color: #4B9CD3;
+  color: white;
+}
+
+.research-project {
+  margin-bottom: 3rem;
+  max-width: 750px;
+}
+
+.research-project h2 {
+  color: #4B9CD3;
 }
 
 /* ===== Mobile Responsiveness ===== */
@@ -152,9 +206,14 @@ p {
 
   .top-menu {
     padding: 1rem 2rem;
+    justify-content: center;
   }
 
-  .nav-name-link {
-    display: none; /* Hides the extra name on mobile to save space */
+  .content-body {
+    padding: 2rem;
+  }
+
+  .resume-row {
+    flex-direction: column;
   }
 }
