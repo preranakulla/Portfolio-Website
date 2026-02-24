@@ -1,4 +1,4 @@
-/* Layout Global */
+/* ===== Global Layout ===== */
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7,16 +7,16 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar - Strictly Uniform */
+/* ===== Sidebar - Locked & Uniform ===== */
 .sidebar {
   width: 280px; 
-  min-width: 280px; 
+  min-width: 280px; /* Forces sidebar to never shrink */
   background-color: #ffffff;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #f0f0f0;
-  position: sticky;
+  position: sticky; /* Sidebar stays put while you scroll */
   top: 0;
   height: 100vh;
   box-sizing: border-box;
@@ -24,52 +24,60 @@ body {
 
 .profile-img {
   width: 100%;
-  height: 260px; 
+  height: 260px; /* Consistent Portrait Ratio */
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
 }
 
 .sidebar-name {
-  font-size: 1.8rem; /* Uniform size */
+  font-size: 1.8rem;
   margin: 0;
   color: #222;
   font-weight: 700;
 }
 
 .subtitle {
-  font-size: 0.95rem; /* Uniform size */
+  font-size: 0.95rem;
   color: #666;
   margin: 0.5rem 0 2rem 0;
   line-height: 1.4;
 }
 
+/* Contact List - Fixed Stacking */
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.2rem; /* This creates the space between Location, Email, and LinkedIn */
+  margin-top: 1rem;
 }
 
 .contact-item {
   text-decoration: none;
   color: #444;
-  font-size: 0.95rem; /* Uniform size */
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+  color: #4B9CD3; /* UNC Blue highlight */
 }
 
 .icon {
-  width: 24px;
+  width: 28px; /* Fixed width so all text starts at the same vertical line */
   margin-right: 10px;
   text-align: center;
+  font-size: 1.1rem;
 }
 
-/* Top Menu */
+/* ===== Top Menu Styling ===== */
 .top-menu {
   padding: 1.5rem 3rem;
   border-bottom: 1px solid #eee;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Links on left, Name on right */
   align-items: center;
 }
 
@@ -81,6 +89,10 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a {
   color: #666;
 }
 
@@ -89,13 +101,60 @@ body {
   border-bottom: 2px solid #4B9CD3;
 }
 
+/* Top Right Name Link */
 .nav-name-link {
   color: #999;
   font-size: 0.95rem;
   font-weight: 400 !important;
 }
 
+.nav-name-link:hover {
+  color: #666;
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .content-body {
   padding: 2.5rem 4rem;
-  max-width: 800px;
+  max-width: 850px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 2rem;
+  }
+
+  .top-menu {
+    padding: 1rem 2rem;
+  }
+
+  .nav-name-link {
+    display: none; /* Hides the extra name on mobile to save space */
+  }
 }
