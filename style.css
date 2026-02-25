@@ -214,6 +214,14 @@ p {
   }
 
   .resume-row {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between; /* This pushes the date to the right edge */
+    align-items: baseline;          /* Keeps the text aligned on the same bottom line */
+    margin-bottom: 4px;
   }
-}
+
+  .resume-date {
+    color: #888;      /* Keeps the date in that professional grey color */
+    font-size: 0.9rem;
+    white-space: nowrap; /* Prevents the date from breaking into two lines */
+  }
