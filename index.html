@@ -13,18 +13,18 @@
     
     <div class="profile-header">
       <h1 class="sidebar-name">Prerana Kulla</h1>
-      <p class="subtitle">Undergraduate Student, UNC Chapel Hill</p>
+      <p class="subtitle">Undergraduate Student, UNC Chapel Hill [cite: 82]</p>
     </div>
     
     <div class="contact-list">
       <div class="contact-item">
-        <span class="icon">📍</span> Chapel Hill & Charlotte, NC
+        <span class="icon">📍</span> Chapel Hill & Charlotte, NC [cite: 78]
       </div>
       <a href="mailto:kprerana@unc.edu" class="contact-item">
-        <span class="icon">✉</span> Email
+        <span class="icon">✉</span> Email [cite: 78]
       </a>
       <a href="https://www.linkedin.com/in/prerana-kulla" target="_blank" class="contact-item">
-        <span class="icon">🔗</span> LinkedIn
+        <span class="icon">🔗</span> LinkedIn [cite: 79]
       </a>
     </div>
   </aside>
@@ -43,52 +43,61 @@
       
       <div class="intro-text">
         <p>
-          Hi! I’m Prerana Kulla, a freshman at UNC-Chapel Hill from Harrisburg, NC[cite: 78]. Before coming to Carolina, I graduated from the North Carolina School of Science and Mathematics at Morganton. Currently, I am pursuing a double major in <strong>Psychology and Computer Science</strong> with a minor in <strong>Business of Health</strong>.
+          Hi! I’m Prerana Kulla, a freshman at UNC-Chapel Hill from Harrisburg, NC[cite: 78]. Before coming to Carolina, I graduated from the North Carolina School of Science and Mathematics at Morganton[cite: 82, 88]. Currently, I am pursuing a double major in <strong>Psychology and Computer Science</strong> with a minor in <strong>Business of Health</strong>[cite: 82].
         </p>
 
         <p>
-          On campus, I serve as a Residential Computing Consultant (RCC) with ResNET[cite: 120]. I am also an active member of Carolina Women in Business, CPALS, and Bharat Sangeet[cite: 128]. I work as a Research Assistant at the <strong>Schiller Lab</strong>, where I study the correlation between estradiol and the development of Alzheimer's Disease in women[cite: 84, 86].
+          On campus, I serve as a Residential Computing Consultant (RCC) with ResNET[cite: 120]. I am also an active member of Carolina Women in Business, CPALS, and Bharat Sangeet[cite: 128]. I work as a Research Assistant at the <strong>Schiller Lab</strong>, where I study the correlation between estradiol and neural and molecular responses to reward in women[cite: 84, 85, 86].
         </p>
 
         <p>
-          Looking ahead, I hope to gain more experience in psychiatric research specifically focused on women's health.
+          Looking ahead, I hope to gain more experience in psychiatric research specifically focused on women's health[cite: 84].
         </p>
       </div>
 
       <div class="carousel-container">
         <h1>Featured Projects</h1>
         
-        <div class="carousel">
-          <div class="carousel-slide active">
-            <a href="https://www.thepaper.media/news/education/ncssm-senior-prerana-kulla-fights-period-poverty-with-local-drive/article_ce962f66-b810-11ef-9ee5-dbb0216cd633.html" target="_blank">
-              <div class="slide-content">
-                <h3 class="carousel-subheading">Check out my Endeavors in Women's Menstrual Health!</h3>
-                <img src="Carasoul 1.png" alt="Women's Menstrual Health Initiative" class="carousel-img">
-              </div>
-            </a>
-          </div>
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            
+            <div class="carousel-slide">
+              <a href="https://www.thepaper.media/news/education/ncssm-senior-prerana-kulla-fights-period-poverty-with-local-drive/article_ce962f66-b810-11ef-9ee5-dbb0216cd633.html" target="_blank">
+                <div class="slide-content">
+                  <h3 class="carousel-subheading">Endeavors in Women's Menstrual Health</h3>
+                  <img src="Carasoul 1.png" alt="Menstrual Health Initiative" class="carousel-img">
+                </div>
+              </a>
+            </div>
 
-          <div class="carousel-slide">
-            <a href="https://preranakulla.blogspot.com/" target="_blank">
-              <div class="slide-content">
-                <h3 class="carousel-subheading">Bridging the Distance: My Travel Blog</h3>
-                <img src="bridging_the_distance.png" alt="Bridging the Distance Travel Blog" class="carousel-img">
-              </div>
-            </a>
-          </div>
+            <div class="carousel-slide">
+              <a href="https://preranakulla.blogspot.com/" target="_blank">
+                <div class="slide-content">
+                  <h3 class="carousel-subheading">Bridging the Distance: My Travel Blog</h3>
+                  <img src="bridging_the_distance.png" alt="Travel Blog" class="carousel-img">
+                </div>
+              </a>
+            </div>
 
-          <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-          <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+          <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
         </div>
       </div>
-    </div> </main> <script>
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("carousel-slide");
+    </div> 
+  </main>
 
-    function moveSlide(n) {
-      slides[slideIndex].classList.remove("active");
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      slides[slideIndex].classList.add("active");
+  <script>
+    function scrollCarousel(direction) {
+      const viewport = document.querySelector('.carousel-viewport');
+      const scrollAmount = 450; // Adjust based on your preferred scroll distance
+      viewport.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
     }
   </script>
 

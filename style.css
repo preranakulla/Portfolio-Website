@@ -10,13 +10,13 @@ body {
 /* ===== Sidebar - Locked & Uniform ===== */
 .sidebar {
   width: 280px; 
-  min-width: 280px; /* Forces sidebar to stay exactly 280px wide */
+  min-width: 280px;
   background-color: #ffffff;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #f0f0f0;
-  position: sticky; /* Keeps bio visible while you scroll */
+  position: sticky;
   top: 0;
   height: 100vh;
   box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
 
 .profile-img {
   width: 100%;
-  height: 260px; /* Consistent Portrait Ratio */
+  height: 260px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
@@ -44,11 +44,10 @@ body {
   line-height: 1.4;
 }
 
-/* Contact List - Clean Vertical Stacking */
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* Creates the space between Location, Email, and LinkedIn */
+  gap: 1.2rem;
   margin-top: 1rem;
 }
 
@@ -62,25 +61,24 @@ body {
 }
 
 .contact-item:hover {
-  color: #4B9CD3; /* Carolina Blue highlight */
+  color: #4B9CD3;
 }
 
 .icon {
-  width: 28px; /* Fixed width so icons align and text starts at same line */
+  width: 28px;
   margin-right: 10px;
   text-align: center;
   font-size: 1.1rem;
 }
 
-/* ===== Top Menu Styling ===== */
-/* Updated Top Menu Styling */
+/* ===== Top Menu (Carolina Blue) ===== */
 .top-menu {
-  background-color: #4B9CD3; /* Carolina Blue */
+  background-color: #4B9CD3;
   padding: 1rem 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: none; /* Removed line for cleaner look */
+  border-bottom: none;
 }
 
 .nav-links {
@@ -91,7 +89,7 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   transition: opacity 0.2s;
 }
 
@@ -101,7 +99,7 @@ body {
 
 .nav-links a.active {
   color: #ffffff;
-  border-bottom: 2px solid #ffffff; /* White underline for active tab */
+  border-bottom: 2px solid #ffffff;
 }
 
 /* ===== Main Content Area ===== */
@@ -121,7 +119,6 @@ h1 {
   color: #222;
 }
 
-/* Narrowing text for better readability */
 .intro-text {
   max-width: 700px;
   line-height: 1.7;
@@ -156,12 +153,14 @@ p {
 .resume-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 4px;
 }
 
 .resume-date {
   color: #888;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .resume-item ul {
@@ -195,6 +194,76 @@ p {
   color: #4B9CD3;
 }
 
+/* ===== Horizontal Scroll Carousel ===== */
+.carousel-container {
+    margin-top: 3rem;
+    max-width: 800px;
+}
+
+.carousel-viewport {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    padding: 1rem 0;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.carousel-slide {
+    flex: 0 0 450px; /* Width of each project card */
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-subheading {
+    color: #4B9CD3;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-btn {
+    background: #4B9CD3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background: #367cb3;
+}
+
 /* ===== Mobile Responsiveness ===== */
 @media (max-width: 768px) {
   body {
@@ -220,68 +289,10 @@ p {
   }
 
   .resume-row {
-    display: flex;
-    justify-content: space-between; /* This pushes the date to the right edge */
-    align-items: baseline;          /* Keeps the text aligned on the same bottom line */
-    margin-bottom: 4px;
+    flex-direction: column;
   }
 
-  .resume-date {
-    color: #888;      /* Keeps the date in that professional grey color */
-    font-size: 0.9rem;
-    white-space: nowrap; /* Prevents the date from breaking into two lines */
+  .carousel-slide {
+    flex: 0 0 300px; /* Smaller slides for mobile */
   }
-  /* ===== Carousel Multi-Slide Logic ===== */
-  
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-}
-
-.carousel-slide {
-  display: none; /* Hide all slides by default */
-  width: 100%;
-  animation: fadeIn 0.5s ease;
-}
-
-.carousel-slide.active {
-  display: block; /* Only show the active slide */
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Navigation Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 60%; /* Positioned relative to the image area */
-  transform: translateY(-50%);
-  background-color: rgba(75, 156, 211, 0.7); /* Carolina Blue with transparency */
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 18px;
-  z-index: 10;
-  transition: background 0.3s;
-}
-
-.carousel-btn:hover {
-  background-color: rgba(75, 156, 211, 1);
-}
-
-.prev { left: -50px; } /* Positions arrows slightly outside the container */
-.next { left: 360px; } /* Adjust based on your carousel-img width */
-
-@media (max-width: 768px) {
-  .carousel-btn {
-    top: auto;
-    bottom: -40px;
-  }
-  .prev { left: 20%; }
-  .next { left: 70%; }
 }
