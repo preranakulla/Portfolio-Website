@@ -73,12 +73,14 @@ body {
 }
 
 /* ===== Top Menu Styling ===== */
+/* Updated Top Menu Styling */
 .top-menu {
-  padding: 1.5rem 3rem;
-  border-bottom: 1px solid #eee;
+  background-color: #4B9CD3; /* Carolina Blue */
+  padding: 1rem 3rem;
   display: flex;
-  justify-content: flex-start; /* Links stay on the left */
+  justify-content: flex-start;
   align-items: center;
+  border-bottom: none; /* Removed line for cleaner look */
 }
 
 .nav-links {
@@ -89,13 +91,17 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
-  color: #666;
-  transition: color 0.2s;
+  color: #ffffff; /* White text */
+  transition: opacity 0.2s;
+}
+
+.top-menu a:hover {
+  opacity: 0.8;
 }
 
 .nav-links a.active {
-  color: #222;
-  border-bottom: 2px solid #4B9CD3;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff; /* White underline for active tab */
 }
 
 /* ===== Main Content Area ===== */
