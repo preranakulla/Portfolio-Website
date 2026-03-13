@@ -231,3 +231,57 @@ p {
     font-size: 0.9rem;
     white-space: nowrap; /* Prevents the date from breaking into two lines */
   }
+  /* ===== Carousel Multi-Slide Logic ===== */
+  
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.carousel-slide {
+  display: none; /* Hide all slides by default */
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+.carousel-slide.active {
+  display: block; /* Only show the active slide */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 60%; /* Positioned relative to the image area */
+  transform: translateY(-50%);
+  background-color: rgba(75, 156, 211, 0.7); /* Carolina Blue with transparency */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(75, 156, 211, 1);
+}
+
+.prev { left: -50px; } /* Positions arrows slightly outside the container */
+.next { left: 360px; } /* Adjust based on your carousel-img width */
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    top: auto;
+    bottom: -40px;
+  }
+  .prev { left: 20%; }
+  .next { left: 70%; }
+}

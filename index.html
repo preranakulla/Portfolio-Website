@@ -20,7 +20,7 @@
       <div class="contact-item">
         <span class="icon">📍</span> Chapel Hill & Charlotte, NC
       </div>
-      <a href="mailto:kullaprerana@gmail.com" class="contact-item">
+      <a href="mailto:kprerana@unc.edu" class="contact-item">
         <span class="icon">✉</span> Email
       </a>
       <a href="https://www.linkedin.com/in/prerana-kulla" target="_blank" class="contact-item">
@@ -30,51 +30,67 @@
   </aside>
 
   <main class="main-content">
-    
     <nav class="top-menu">
       <div class="nav-links">
         <a href="index.html" class="active">About Me</a>
         <a href="resume.html">Resume</a>
         <a href="research.html">Research</a>
       </div>
-      </nav>
+    </nav>
 
     <div class="content-body">
       <h1>Welcome</h1>
       
       <div class="intro-text">
         <p>
-          Hi! I’m Prerana Kulla, a freshman at UNC-Chapel Hill from Harrisburg, NC. Before coming to Carolina, I spent two years living in Morganton, NC, attending the North Carolina School of Science and Mathematics. Currently, I am pursuing a double major in Psychology and Computer Science with a minor in Business of Health.
+          Hi! I’m Prerana Kulla, a freshman at UNC-Chapel Hill from Harrisburg, NC[cite: 78]. Before coming to Carolina, I graduated from the North Carolina School of Science and Mathematics at Morganton. Currently, I am pursuing a double major in <strong>Psychology and Computer Science</strong> with a minor in <strong>Business of Health</strong>.
         </p>
 
         <p>
-          On campus, I serve as a Residential Computing Consultant (RCC) with ResNET. I am also an active member of Carolina Women in Business, CPALS and Bharat Sangeet. I work as a Research Assistant at the Schiller Lab where I I work as a Research Assistant at the Schiller Lab where I study the correlation between prescribing estrogen and the development of Alzhiemer's Disease in Women.
+          On campus, I serve as a Residential Computing Consultant (RCC) with ResNET[cite: 120]. I am also an active member of Carolina Women in Business, CPALS, and Bharat Sangeet[cite: 128]. I work as a Research Assistant at the <strong>Schiller Lab</strong>, where I study the correlation between estradiol and the development of Alzheimer's Disease in women[cite: 84, 86].
         </p>
 
         <p>
-          Looking ahead, I hope to get more experience in psychiatric research in women.
+          Looking ahead, I hope to gain more experience in psychiatric research specifically focused on women's health.
         </p>
       </div>
 
       <div class="carousel-container">
-  <h2>Featured Endeavors</h2>
-  <div class="carousel">
-    <div class="carousel-slide active">
-      <a href="https://www.thepaper.media/news/education/ncssm-senior-prerana-kulla-fights-period-poverty-with-local-drive/article_ce962f66-b810-11ef-9ee5-dbb0216cd633.html" target="_blank">
-        <div class="slide-content">
-          <img src="Carasoul 1.png" alt="Women's Menstrual Health Initiative" class="carousel-img">
-          <div class="carousel-caption">
-            <h3>Check out my Endeavors in Women's Menstrual Health!</h3>
-            <p>Read about the local drive to fight period poverty at NCSSM.</p>
+        <h1>Featured Projects</h1>
+        
+        <div class="carousel">
+          <div class="carousel-slide active">
+            <a href="https://www.thepaper.media/news/education/ncssm-senior-prerana-kulla-fights-period-poverty-with-local-drive/article_ce962f66-b810-11ef-9ee5-dbb0216cd633.html" target="_blank">
+              <div class="slide-content">
+                <h3 class="carousel-subheading">Check out my Endeavors in Women's Menstrual Health!</h3>
+                <img src="Carasoul 1.png" alt="Women's Menstrual Health Initiative" class="carousel-img">
+              </div>
+            </a>
           </div>
+
+          <div class="carousel-slide">
+            <a href="https://preranakulla.blogspot.com/" target="_blank">
+              <div class="slide-content">
+                <h3 class="carousel-subheading">Bridging the Distance: My Travel Blog</h3>
+                <img src="bridging_the_distance.png" alt="Bridging the Distance Travel Blog" class="carousel-img">
+              </div>
+            </a>
+          </div>
+
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-      </a>
-    </div>
-    
-    </div>
-</div>
-    </div>
-  </main>
+      </div>
+    </div> </main> <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("carousel-slide");
+
+    function moveSlide(n) {
+      slides[slideIndex].classList.remove("active");
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+  </script>
 
 </body>
 </html>
