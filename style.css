@@ -217,14 +217,17 @@ p {
 /* ===== Horizontal Scroll Carousel ===== */
 .carousel-container {
     margin-top: 3rem;
-    max-width: 800px;
+    max-width: 100%; /* Change from 800px to 100% to fill the content area */
+    width: 100%;
 }
 
 .carousel-viewport {
+    .carousel-viewport {
+    width: 100%; /* Ensure it spans the full container width */
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
     padding: 1rem 0;
 }
 
@@ -313,6 +316,10 @@ p {
   }
 
   .carousel-slide {
-    flex: 0 0 300px; /* Smaller slides for mobile */
+    flex: 0 0 48%; /* Adjusting this to ~48% allows two projects to sit side-by-side naturally */
+    min-width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
   }
 }
