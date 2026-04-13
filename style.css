@@ -128,6 +128,26 @@ p {
   margin-bottom: 1.2rem;
 }
 
+/* ===== Research Statement & Layout Extras ===== */
+.research-statement-section {
+    margin-bottom: 2rem;
+}
+
+.research-statement-section .intro-text {
+    border-left: 4px solid #4B9CD3; /* Carolina Blue accent */
+    padding-left: 20px;
+    background-color: #fcfcfc;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 3rem 0;
+}
+
 /* ===== Resume & Research Layouts ===== */
 .resume-header-row {
   display: flex;
