@@ -133,12 +133,21 @@ p {
     margin-bottom: 2rem;
 }
 
-.research-statement-section .intro-text {
+/* Updated research block for full-page width and single paragraph flow */
+.research-text-block {
+    max-width: 100%; 
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding: 15px 20px; /* Combined top/bottom and left/right padding */
     border-left: 4px solid #4B9CD3; /* Carolina Blue accent */
-    padding-left: 20px;
     background-color: #fcfcfc;
-    padding-top: 10px;
-    padding-bottom: 1px;
+    color: #333;
+}
+
+/* Kept for potential use if you need other styled text blocks later */
+.intro-text {
+    max-width: 700px;
+    line-height: 1.7;
 }
 
 .section-divider {
