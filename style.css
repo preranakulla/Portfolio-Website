@@ -224,6 +224,44 @@ p {
   padding-left: 0;
 }
 
+/* Updated Project Item Layout */
+/* Updated Project Item Layout */
+.project-item {
+  display: grid;
+  /* Text on left (1fr), Image on right (120px) */
+  grid-template-columns: 1fr 120px; 
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.project-img {
+  width: 120px; /* Smaller size */
+  height: 120px; /* Square shape */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  /* Optional: align image to the far right of its column */
+  justify-self: end; 
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+  .project-img {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+}
+
 /* ===== Horizontal Scroll Carousel ===== */
 .carousel-container {
   margin-top: 3rem;
@@ -332,13 +370,14 @@ p {
     max-width: 700px;
   }
   .featured-quote {
-    font-family: "Georgia", serif;
-    font-size: 1.4rem;
+    font-family: "Playfair Display", "Georgia", serif;
+    font-size: 1.6em;
     font-style: italic;
-    color: #555;
+    color: #333;
     line-height: 1.6;
     position: relative;
     padding: 0 40px;
+    margin: 1rem 0;
   }
   .featured-quote::before {
     content: "“";
