@@ -29,16 +29,19 @@
     </div>
   </aside>
 
-  <main class="main-content">
-    <nav class="top-menu">
-      <div class="nav-links">
-        <a href="index.html" class="active">About Me</a>
-        <a href="resume.html">Resume</a>
-        <a href="research.html">Research</a>
-      </div>
-    </nav>
+    <main class="main-content">
+      <nav class="top-menu">
+        <div class="nav-links">
+          <a href="index.html">About Me</a>
+          <a href="resume.html">Resume</a>
+          <a href="research.html">Research</a>
+          <a href="personal.html" class="active">Personal Interests</a>
+        </div>
+      </nav>
 
-    <div class="content-body">
+      <div class="content-body">
+        </div>
+    </main>
       <h1>Welcome</h1>
 
       <div class="intro-text">
@@ -65,61 +68,5 @@
           <cite>— Thomas Berger</cite>
         </blockquote>
       </div>
-
-      <div class="carousel-container">
-        <h1>Featured Projects</h1>
-        
-        <div class="carousel-viewport">
-          <div class="carousel-track">
-            
-            <div class="carousel-slide">
-              <a href="https://www.thepaper.media/news/education/ncssm-senior-prerana-kulla-fights-period-poverty-with-local-drive/article_ce962f66-b810-11ef-9ee5-dbb0216cd633.html" target="_blank">
-                <div class="slide-content">
-                  <h3 class="carousel-subheading">Endeavors in Women's Menstrual Health</h3>
-                  <img src="Carasoul 1.png" alt="Menstrual Health Initiative" class="carousel-img">
-                </div>
-              </a>
-            </div>
-
-            <div class="carousel-slide">
-              <a href="https://preranakulla.blogspot.com/" target="_blank">
-                <div class="slide-content">
-                  <h3 class="carousel-subheading">Bridging the Distance: My Travel Blog</h3>
-                  <img src="bridging_the_distance.png" alt="Travel Blog" class="carousel-img">
-                </div>
-              </a>
-            </div>
-
-            <div class="carousel-slide">
-              <a href="https://www.cltshakti.dance/natya-margam/arangetram/prerana-kulla" target="_blank">
-                <div class="slide-content">
-                  <h3 class="carousel-subheading">Bharatanatyam Arangetram Recital</h3>
-                  <img src="dance.png" alt="Bharatanatyam Arangetram" class="carousel-img">
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="carousel-nav">
-          <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
-          <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
-        </div>
-      </div>
-    </div> 
-  </main>
-
-  <script>
-    function scrollCarousel(direction) {
-      const viewport = document.querySelector('.carousel-viewport');
-      const scrollAmount = 450; 
-      viewport.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-
 </body>
 </html>
