@@ -123,8 +123,11 @@ h1 {
 }
 
 .intro-text {
-  max-width: 700px;
-  line-height: 1.7;
+    max-width: 700px; /* Restricts the width to a comfortable reading column */
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    /* Optional: keep it left-aligned */
+    text-align: left; 
 }
 
 p {
@@ -132,19 +135,24 @@ p {
 }
 
 /* ===== Research Statement & Layout Extras ===== */
-.research-statement-section {
-    margin-bottom: 0.5rem;
+.content-section {
+    margin-bottom: 1.5rem; /* Reduced space between sections */
 }
 
-/* Updated research block for full-page width and single paragraph flow */
+/* Ensure headings align with the text blocks */
+h1 {
+    margin-bottom: 1rem;
+    padding-left: 0; /* Align titles with the rest of the content */
+}
+
+/* Tighten the space between statement body and next header */
 .research-text-block {
-    max-width: 100%; 
+    max-width: 100%;
     line-height: 1.7;
-    margin-bottom: 0.5rem;
-    padding: 15px 20px; /* Combined top/bottom and left/right padding */
-    border-left: 4px solid #4B9CD3; /* Carolina Blue accent */
+    margin-bottom: 1rem; /* Reduced from 2rem to pull titles closer */
+    padding: 15px 20px;
+    border-left: 4px solid #4B9CD3;
     background-color: #fcfcfc;
-    color: #333;
 }
 
 /* Kept for potential use if you need other styled text blocks later */
@@ -224,13 +232,15 @@ p {
   color: white;
 }
 
-.research-project {
-  margin-bottom: 3rem;
-  max-width: 750px;
+.project-item {
+    margin-bottom: 2rem;
+    padding-left: 24px; /* Matches the padding of research-text-block */
+    border-left: 4px solid transparent; /* Keeps the invisible boundary aligned */
 }
 
-.research-project h2 {
-  color: #4B9CD3;
+.project-item h3 {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /* ===== Horizontal Scroll Carousel ===== */
