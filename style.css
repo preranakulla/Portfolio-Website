@@ -136,11 +136,11 @@ p {
 /* ===== Updated Project Item Layout (Improved) ===== */
 .project-item {
   display: grid;
-  /* Wider image column for better balance */
-  grid-template-columns: 1fr 250px; 
+  /* Increased from 250px to 350px */
+  grid-template-columns: 1fr 350px; 
   gap: 2rem;
   margin-bottom: 3rem;
-  align-items: center; /* better vertical alignment */
+  align-items: center;
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #f2f2f2;
@@ -149,17 +149,18 @@ p {
 }
 
 .project-item:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   transform: translateY(-4px);
 }
 
 .project-img {
-  width: 250px; /* bigger, more proportional */
-  height: 250px;
+  /* Increased from 250px to 350px */
+  width: 350px; 
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #eee;
-  justify-self: end; 
+  justify-self: end;
 }
 
 .project-text {
