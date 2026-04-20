@@ -225,7 +225,6 @@ p {
 }
 
 /* Updated Project Item Layout */
-/* Updated Project Item Layout */
 .project-item {
   display: grid;
   /* Text on left (1fr), Image on right (120px) */
@@ -236,8 +235,8 @@ p {
 }
 
 .project-img {
-  width: 120px; /* Smaller size */
-  height: 120px; /* Square shape */
+  width: 80px; /* Smaller size */
+  height: 80px; /* Square shape */
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #eee;
