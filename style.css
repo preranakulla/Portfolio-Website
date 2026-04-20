@@ -24,7 +24,7 @@ body {
 
 .profile-img {
   width: 100%;
-  height: 260px;
+  height: 240px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
@@ -133,14 +133,14 @@ p {
 
 /* ===== Research Statement & Layout Extras ===== */
 .research-statement-section {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Updated research block for full-page width and single paragraph flow */
 .research-text-block {
-    max-width: 90%; 
+    max-width: 100%; 
     line-height: 1.7;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     padding: 15px 20px; /* Combined top/bottom and left/right padding */
     border-left: 4px solid #4B9CD3; /* Carolina Blue accent */
     background-color: #fcfcfc;
@@ -149,7 +149,7 @@ p {
 
 /* Kept for potential use if you need other styled text blocks later */
 .intro-text {
-    max-width: 600px;
+    max-width: 100%;
     line-height: 1.7;
 }
 
@@ -327,7 +327,7 @@ p {
   }
 
   .content-body {
-    padding: 2rem;
+    padding: 2.5rem 2rem;
   }
 
   .resume-row {
