@@ -137,7 +137,7 @@ p {
 .project-item {
   display: grid;
   /* Wider image column for better balance */
-  grid-template-columns: 1fr 220px; 
+  grid-template-columns: 1fr 250px; 
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: center; /* better vertical alignment */
@@ -154,8 +154,8 @@ p {
 }
 
 .project-img {
-  width: 200px; /* bigger, more proportional */
-  height: 200px;
+  width: 250px; /* bigger, more proportional */
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #eee;
