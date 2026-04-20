@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Sidebar ===== */
+/* ===== Sidebar - Locked & Uniform ===== */
 .sidebar {
   width: 280px; 
   min-width: 280px;
@@ -28,78 +28,363 @@ body {
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
+  /* Add these two lines */
   border: 4px solid #4B9CD3; 
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures the border doesn't change the size of the image */
 }
 
-.sidebar-name { font-size: 1.8rem; margin: 0; color: #222; font-weight: 700; }
-.subtitle { font-size: 0.95rem; color: #666; margin: 0.5rem 0 2rem 0; line-height: 1.4; }
+.sidebar-name {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #222;
+  font-weight: 700;
+}
 
-.contact-list { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1rem; }
-.contact-item { text-decoration: none; color: #444; font-size: 0.95rem; display: flex; align-items: center; transition: color 0.2s; }
-.contact-item:hover { color: #4B9CD3; }
-.icon { width: 28px; margin-right: 10px; text-align: center; font-size: 1.1rem; }
+.subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.4;
+}
 
-/* ===== Top Menu ===== */
-.top-menu { background-color: #4B9CD3; padding: 1rem 3rem; display: flex; justify-content: flex-start; align-items: center; }
-.nav-links { display: flex; gap: 2.5rem; }
-.top-menu a { text-decoration: none; font-weight: 600; color: #ffffff; transition: opacity 0.2s; }
-.top-menu a:hover { opacity: 0.8; }
-.nav-links a.active { color: #ffffff; border-bottom: 2px solid #ffffff; }
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+  color: #4B9CD3;
+}
+
+.icon {
+  width: 28px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* ===== Top Menu (Carolina Blue) ===== */
+.top-menu {
+  background-color: #4B9CD3;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.top-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  transition: opacity 0.2s;
+}
+
+.top-menu a:hover {
+  opacity: 0.8;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
 
 /* ===== Main Content Area ===== */
-.main-content { flex: 1; display: flex; flex-direction: column; }
-.content-body { padding: 2.5rem 4rem; }
-h1 { font-size: 2.2rem; margin-bottom: 1.5rem; color: #222; }
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-/* ===== Content Blocks ===== */
-.intro-text { max-width: 700px; line-height: 1.7; margin-bottom: 2rem; }
-.content-section { margin-bottom: 2rem; }
+.content-body {
+  padding: 2.5rem 4rem;
+}
 
-.research-text-block {
-    max-width: 100%; 
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.intro-text {
+    max-width: 700px; /* Restricts the width to a comfortable reading column */
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    /* Optional: keep it left-aligned */
+    text-align: left; 
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Research Statement & Layout Extras ===== */
+.content-section {
+    margin-bottom: 1.5rem; /* Reduced space between sections */
+}
+
+/* Ensure headings align with the text blocks */
+h1 {
+    margin-bottom: 1rem;
+    padding-left: 0; /* Align titles with the rest of the content */
+}
+
+/* Tighten the space between statement body and next header */
+.research-text-block {
+    max-width: 100%;
+    line-height: 1.7;
+    margin-bottom: 1rem; /* Reduced from 2rem to pull titles closer */
     padding: 15px 20px;
     border-left: 4px solid #4B9CD3;
     background-color: #fcfcfc;
 }
 
-.project-item { margin-bottom: 2rem; padding-left: 20px; border-left: 4px solid #4B9CD3; }
-
-/* ===== Quote Section ===== */
-.quote-container { margin: 4rem 0; text-align: center; max-width: 700px; }
-.featured-quote { font-family: "Georgia", serif; font-size: 1.4rem; font-style: italic; color: #555; line-height: 1.6; position: relative; padding: 0 40px; }
-.featured-quote::before { content: "“"; color: #4B9CD3; font-size: 4rem; position: absolute; left: 0; top: -20px; }
-.featured-quote cite { display: block; font-size: 0.9rem; font-style: normal; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-top: 1rem; }
-
-/* ===== Resume Styles ===== */
-.resume-section h2 { font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 2.5rem; text-transform: uppercase; color: #4B9CD3; }
-.resume-item ul { margin: 8px 0; padding-left: 1.5rem; }
-.resume-item li { margin-bottom: 5px; line-height: 1.5; color: #444; }
-.resume-row { display: flex; justify-content: space-between; align-items: baseline; }
-.resume-date { color: #888; font-size: 0.9rem; white-space: nowrap; }
-
-/* ===== Carousel ===== */
-.carousel-container { margin-top: 3rem; width: 100%; }
-.carousel-viewport { 
-    width: 100%; 
-    overflow-x: auto; 
-    scroll-behavior: smooth; 
-    scrollbar-width: none; 
-    padding: 1rem 0; 
-    display: flex; 
-    gap: 2.5rem; 
+/* Kept for potential use if you need other styled text blocks later */
+.intro-text {
+    max-width: 100%;
+    line-height: 1.7;
 }
-.carousel-viewport::-webkit-scrollbar { display: none; }
-.carousel-slide { flex: 0 0 450px; background: #fff; border-radius: 8px; }
-.carousel-img { width: 100%; height: 300px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.carousel-subheading { color: #4B9CD3; margin: 1rem 0; font-size: 1.1rem; }
-.nav-btn { background: #4B9CD3; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 3rem 0;
+}
+
+/* ===== Resume & Research Layouts ===== */
+.resume-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4B9CD3;
+}
+
+.resume-item ul {
+    margin: 8px 0;
+    padding-left: 1.5rem; /* Indents the bullets correctly */
+}
+
+.resume-item li {
+    margin-bottom: 5px; /* Adds space between each bullet */
+    line-height: 1.5;
+    color: #444;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.resume-date {
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.resume-item ul {
+  margin: 8px 0;
+  padding-left: 1.2rem;
+}
+
+.download-button {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #4B9CD3;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #4B9CD3;
+  transition: all 0.2s;
+}
+
+.download-button:hover {
+  background-color: #4B9CD3;
+  color: white;
+}
+
+.project-item {
+    margin-bottom: 2rem;
+    padding-left: 24px; /* Matches the padding of research-text-block */
+    border-left: 4px solid transparent; /* Keeps the invisible boundary aligned */
+}
+
+.project-item h3 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* ===== Horizontal Scroll Carousel ===== */
+.carousel-container {
+    margin-top: 3rem;
+    max-width: 100%; /* Change from 800px to 100% to fill the content area */
+    width: 100%;
+}
+
+.carousel-viewport {
+    .carousel-viewport {
+    width: 100%; /* Ensure it spans the full container width */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    padding: 1rem 0;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.carousel-slide {
+    flex: 0 0 450px; /* Width of each project card */
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-subheading {
+    color: #4B9CD3;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-btn {
+    background: #4B9CD3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background: #367cb3;
+}
 
 /* ===== Mobile Responsiveness ===== */
 @media (max-width: 768px) {
-  body { flex-direction: column; }
-  .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid #eee; }
-  .content-body { padding: 2rem; }
+  body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 2rem;
+  }
+
+  .top-menu {
+    padding: 1rem 2rem;
+    justify-content: center;
+  }
+
+  .content-body {
+    padding: 2.5rem 2rem;
+  }
+
+  .resume-row {
+    flex-direction: column;
+  }
+
+  .carousel-slide {
+    flex: 0 0 48%; /* Adjusting this to ~48% allows two projects to sit side-by-side naturally */
+    min-width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .quote-container {
+  margin: 4rem 0; /* Adds space above and below the quote */
+  text-align: center;
+  max-width: 700px;
+}
+
+.featured-quote {
+  font-family: "Georgia", serif; /* A serif font makes quotes look more academic/distinguished */
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 40px;
+}
+
+/* Optional: Decorative Carolina Blue quotation marks */
+.featured-quote::before {
+  content: "“";
+  color: #4B9CD3;
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.featured-quote cite {
+  display: block;
+  font-size: 0.9rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-top: 1rem;
+}
 }
