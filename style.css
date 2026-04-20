@@ -224,32 +224,23 @@ p {
   padding-left: 0;
 }
 
-/* ===== Updated Project Item Layout (Improved) ===== */
+/* Updated Project Item Layout */
 .project-item {
   display: grid;
-  /* Wider image column for better balance */
-  grid-template-columns: 1fr 180px; 
+  /* Text on left (1fr), Image on right (120px) */
+  grid-template-columns: 1fr 120px; 
   gap: 2rem;
   margin-bottom: 3rem;
-  align-items: center; /* better vertical alignment */
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #f2f2f2;
-  background-color: #ffffff;
-  transition: all 0.25s ease;
-}
-
-.project-item:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transform: translateY(-4px);
+  align-items: start;
 }
 
 .project-img {
-  width: 160px; /* bigger, more proportional */
-  height: 160px;
+  width: 80px; /* Smaller size */
+  height: px; /* Square shape */
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #eee;
+  /* Optional: align image to the far right of its column */
   justify-self: end; 
 }
 
@@ -263,12 +254,10 @@ p {
   .project-item {
     grid-template-columns: 1fr;
   }
-
   .project-img {
     width: 100%;
     height: auto;
     justify-self: center;
-    margin-top: 1rem;
   }
 }
 
