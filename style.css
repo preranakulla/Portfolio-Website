@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Sidebar - Locked & Uniform ===== */
+/* ===== Sidebar ===== */
 .sidebar {
   width: 280px;
   min-width: 280px;
@@ -20,67 +20,44 @@ body {
   top: 0;
   height: 100vh;
   box-sizing: border-box;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.03);
 }
 
 .profile-img {
   width: 100%;
   height: 270px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 1.5rem;
-  border: 4px solid #000000;
-  box-sizing: border-box;
+  border: 4px solid #000;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.02);
 }
 
 .sidebar-name {
   font-size: 1.8rem;
   margin: 0;
-  color: #222;
   font-weight: 700;
 }
 
 .subtitle {
   font-size: 0.95rem;
   color: #666;
-  margin: 0.5rem 0 2rem 0;
-  line-height: 1.4;
+  margin: 0.5rem 0 2rem;
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1rem;
-}
-
-.contact-item {
-  text-decoration: none;
-  color: #444;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  transition: color 0.2s ease;
-}
-
-.contact-item:hover {
-  color: #4B9CD3;
-}
-
-.icon {
-  width: 28px;
-  margin-right: 10px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-/* ===== Top Menu (Carolina Blue) ===== */
+/* ===== Top Menu ===== */
 .top-menu {
   background-color: #4B9CD3;
   padding: 1rem 3rem;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  border-bottom: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -91,20 +68,14 @@ body {
 .top-menu a {
   text-decoration: none;
   font-weight: 600;
-  color: #ffffff;
-  transition: opacity 0.2s;
-}
-
-.top-menu a:hover {
-  opacity: 0.8;
+  color: #fff;
 }
 
 .nav-links a.active {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
 }
 
-/* ===== Main Content Area ===== */
+/* ===== Main Content ===== */
 .main-content {
   flex: 1;
   display: flex;
@@ -113,99 +84,78 @@ body {
 
 .content-body {
   padding: 2.5rem 4rem;
+  max-width: 1100px;
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #222;
-  padding-left: 0;
+  font-size: 2.6rem;
+  font-weight: 800;
 }
 
 p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .intro-text {
-  max-width: 70%;
+  max-width: 60%;
   line-height: 1.7;
-  margin-bottom: 2rem;
-  text-align: left;
 }
 
-/* ===== Research Statement & Layout Extras ===== */
-.content-section {
-  margin-bottom: 1.5rem;
-}
-
+/* ===== Research Blocks ===== */
 .research-text-block {
-  max-width: 100%;
   line-height: 1.7;
-  margin-bottom: 1rem;
   padding: 15px 20px;
   border-left: 4px solid #4B9CD3;
   background-color: #fcfcfc;
 }
 
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: #eee;
-  margin: 3rem 0;
-}
-
-/* ===== Resume & Research Layouts ===== */
-.resume-header-row {
-  display: flex;
-  justify-content: space-between;
+/* ===== Project Cards (FIXED) ===== */
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 2rem;
+  margin-bottom: 3rem;
   align-items: center;
-  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  transition: all 0.25s ease;
 }
 
-.resume-section h2 {
-  font-size: 1.1rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 5px;
-  margin-top: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #4B9CD3;
+.project-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
 }
 
-.resume-item ul {
-  margin: 8px 0;
-  padding-left: 1.2rem;
+.project-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  justify-self: end;
 }
 
-.resume-item li {
-  margin-bottom: 5px;
-  line-height: 1.5;
-  color: #444;
+.project-text h3 {
+  margin: 0 0 0.5rem;
 }
 
-.resume-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 4px;
+.project-text p {
+  margin: 0.4rem 0;
 }
 
-.resume-date {
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
+/* ===== Buttons ===== */
 .download-button {
+  display: inline-block;
+  margin-top: 0.8rem;
   padding: 8px 16px;
   background-color: #f8f9fa;
   color: #4B9CD3;
-  text-decoration: none;
   border-radius: 4px;
+  border: 1px solid #4B9CD3;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid #4B9CD3;
-  transition: all 0.2s;
 }
 
 .download-button:hover {
@@ -213,74 +163,7 @@ p {
   color: white;
 }
 
-.project-item {
-  margin-bottom: 2rem;
-  padding-left: 24px;
-  border-left: 4px solid transparent;
-}
-
-.project-item h3 {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Updated Project Item Layout */
-.project-item {
-  display: grid;
-  /* Text on left (1fr), Image on right (120px) */
-  grid-template-columns: 1fr 120px; 
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: start;
-}
-
-.project-img {
-  width: 80px; /* Smaller size */
-  height: 80px; /* Square shape */
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  /* Optional: align image to the far right of its column */
-  justify-self: end; 
-}
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Ensure mobile responsiveness */
-@media (max-width: 768px) {
-  .project-item {
-    grid-template-columns: 1fr;
-  }
-  .project-img {
-    width: 100%;
-    height: auto;
-    justify-self: center;
-  }
-}
-
-/* ===== Horizontal Scroll Carousel ===== */
-.carousel-container {
-  margin-top: 3rem;
-  max-width: 100%;
-  width: 100%;
-}
-
-.carousel-viewport {
-  width: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: 1rem 0;
-}
-
-.carousel-viewport::-webkit-scrollbar {
-  display: none;
-}
-
+/* ===== Carousel ===== */
 .carousel-track {
   display: flex;
   gap: 2.5rem;
@@ -288,111 +171,72 @@ p {
 
 .carousel-slide {
   flex: 0 0 450px;
-  background: #fff;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-.carousel-slide a {
-  text-decoration: none;
-  color: inherit;
+.carousel-slide:hover {
+  transform: translateY(-5px);
 }
 
 .carousel-img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.carousel-subheading {
+/* ===== Quote Section (FIXED LOCATION) ===== */
+.quote-container {
+  margin: 4rem 0;
+  text-align: center;
+  max-width: 700px;
+}
+
+.featured-quote {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.6em;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 40px;
+}
+
+.featured-quote::before {
+  content: "“";
   color: #4B9CD3;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  top: -20px;
 }
 
-.carousel-nav {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.nav-btn {
-  background: #4B9CD3;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.nav-btn:hover {
-  background: #367cb3;
-}
-
-/* ===== Mobile Responsiveness ===== */
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
-    border-right: none;
-    border-bottom: 1px solid #eee;
+  }
+
+  .content-body {
     padding: 2rem;
   }
-  .top-menu {
-    padding: 1rem 2rem;
-    justify-content: center;
+
+  .project-item {
+    grid-template-columns: 1fr;
   }
-  .content-body {
-    padding: 2.5rem 2rem;
-  }
-  .resume-row {
-    flex-direction: column;
-  }
-  .carousel-slide {
-    flex: 0 0 48%;
-    min-width: 300px;
-    background: #fff;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  .quote-container {
-    margin: 4rem 0;
-    text-align: center;
-    max-width: 700px;
-  }
-  .featured-quote {
-    font-family: "Playfair Display", "Georgia", serif;
-    font-size: 1.6em;
-    font-style: italic;
-    color: #333;
-    line-height: 1.6;
-    position: relative;
-    padding: 0 40px;
-    margin: 1rem 0;
-  }
-  .featured-quote::before {
-    content: "“";
-    color: #4B9CD3;
-    font-size: 4rem;
-    position: absolute;
-    left: 0;
-    top: -20px;
-  }
-  .featured-quote cite {
-    display: block;
-    font-size: 0.9rem;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #888;
+
+  .project-img {
+    width: 100%;
+    height: auto;
     margin-top: 1rem;
+    justify-self: center;
+  }
+
+  .carousel-slide {
+    min-width: 300px;
   }
 }
