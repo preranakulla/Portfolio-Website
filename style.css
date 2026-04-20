@@ -24,10 +24,13 @@ body {
 
 .profile-img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1.5rem;
+  /* Add these two lines */
+  border: 4px solid #4B9CD3; 
+  box-sizing: border-box; /* Ensures the border doesn't change the size of the image */
 }
 
 .sidebar-name {
@@ -135,7 +138,7 @@ p {
 
 /* Updated research block for full-page width and single paragraph flow */
 .research-text-block {
-    max-width: 100%; 
+    max-width: 90%; 
     line-height: 1.7;
     margin-bottom: 2rem;
     padding: 15px 20px; /* Combined top/bottom and left/right padding */
@@ -146,7 +149,7 @@ p {
 
 /* Kept for potential use if you need other styled text blocks later */
 .intro-text {
-    max-width: 700px;
+    max-width: 600px;
     line-height: 1.7;
 }
 
