@@ -136,8 +136,7 @@ p {
 /* ===== Updated Project Item Layout (Improved) ===== */
 .project-item {
   display: grid;
-  /* Increased from 250px to 350px */
-  grid-template-columns: 1fr 350px; 
+  grid-template-columns: 1fr 260px;
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: center;
@@ -154,11 +153,10 @@ p {
 }
 
 .project-img {
-  /* Increased from 250px to 350px */
-  width: 350px; 
-  height: 350px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #eee;
   justify-self: end;
 }
