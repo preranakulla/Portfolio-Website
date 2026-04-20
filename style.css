@@ -214,51 +214,25 @@ p {
 }
 
 .project-item {
-  margin-bottom: 2rem;
-  padding-left: 24px;
-  border-left: 4px solid transparent;
-}
-
-.project-item h3 {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Updated Project Item Layout */
-.project-item {
   display: grid;
-  /* Text on left (1fr), Image on right (120px) */
-  grid-template-columns: 1fr 120px; 
+  grid-template-columns: 1fr 120px;
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: start;
 }
 
 .project-img {
-  width: 80px; /* Smaller size */
-  height: px; /* Square shape */
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #eee;
-  /* Optional: align image to the far right of its column */
-  justify-self: end; 
+  justify-self: end;
 }
 
 .project-text {
   display: flex;
   flex-direction: column;
-}
-
-/* Ensure mobile responsiveness */
-@media (max-width: 768px) {
-  .project-item {
-    grid-template-columns: 1fr;
-  }
-  .project-img {
-    width: 100%;
-    height: auto;
-    justify-self: center;
-  }
 }
 
 /* ===== Horizontal Scroll Carousel ===== */
@@ -303,7 +277,7 @@ p {
   height: 300px;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-subheading {
@@ -338,6 +312,7 @@ p {
   body {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
     height: auto;
@@ -346,28 +321,41 @@ p {
     border-bottom: 1px solid #eee;
     padding: 2rem;
   }
+
   .top-menu {
     padding: 1rem 2rem;
     justify-content: center;
   }
+
   .content-body {
     padding: 2.5rem 2rem;
   }
+
   .resume-row {
     flex-direction: column;
   }
+
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+
   .carousel-slide {
     flex: 0 0 48%;
     min-width: 300px;
-    background: #fff;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
   }
+
   .quote-container {
     margin: 4rem 0;
     text-align: center;
     max-width: 700px;
   }
+
   .featured-quote {
     font-family: "Playfair Display", "Georgia", serif;
     font-size: 1.6em;
@@ -378,6 +366,7 @@ p {
     padding: 0 40px;
     margin: 1rem 0;
   }
+
   .featured-quote::before {
     content: "“";
     color: #4B9CD3;
@@ -386,6 +375,7 @@ p {
     left: 0;
     top: -20px;
   }
+
   .featured-quote cite {
     display: block;
     font-size: 0.9rem;
