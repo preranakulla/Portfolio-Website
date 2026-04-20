@@ -133,25 +133,52 @@ p {
   text-align: left;
 }
 
-/* ===== Research Statement & Layout Extras ===== */
-.content-section {
-  margin-bottom: 1.5rem;
+/* ===== Updated Project Item Layout (Improved) ===== */
+.project-item {
+  display: grid;
+  /* Wider image column for better balance */
+  grid-template-columns: 1fr 180px; 
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center; /* better vertical alignment */
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #f2f2f2;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
 }
 
-.research-text-block {
-  max-width: 100%;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  padding: 15px 20px;
-  border-left: 4px solid #4B9CD3;
-  background-color: #fcfcfc;
+.project-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
 }
 
-.section-divider {
-  border: 0;
-  height: 1px;
-  background: #eee;
-  margin: 3rem 0;
+.project-img {
+  width: 160px; /* bigger, more proportional */
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  justify-self: end; 
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    margin-top: 1rem;
+  }
 }
 
 /* ===== Resume & Research Layouts ===== */
