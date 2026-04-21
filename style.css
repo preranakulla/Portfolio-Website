@@ -239,85 +239,11 @@ p {
   color: white;
 }
 
-.project-item {
-  display: grid;
-  grid-template-columns: 1fr 120px;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: start;
-}
-
-.project-img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  justify-self: end;
-}
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== Vertical Project List ===== */
-.projects-container {
-  margin-top: 3rem;
-  max-width: 100%;
-  width: 100%;
-}
-
-.project-item {
-  display: grid;
-  /* Adjust the pixel value to match your desired image width */
-  grid-template-columns: 1fr 350px; 
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: center;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid #f2f2f2;
-  background-color: #ffffff;
-  transition: all 0.25s ease;
-}
-
-.project-item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  transform: translateY(-4px);
-}
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.project-img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  justify-self: end;
-}
-
 .carousel-subheading {
   color: #4B9CD3;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 600;
-}
-
-/* Ensure mobile responsiveness for the vertical list */
-@media (max-width: 768px) {
-  .project-item {
-    grid-template-columns: 1fr;
-  }
-  .project-img {
-    width: 100%;
-    height: auto;
-    justify-self: center;
-  }
 }
 
 /* ===== Mobile Responsiveness ===== */
