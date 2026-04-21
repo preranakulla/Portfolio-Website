@@ -15,6 +15,7 @@ body {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
+  min-width: 0;
   border-right: 1px solid #f0f0f0;
   position: sticky;
   top: 0;
@@ -164,11 +165,13 @@ p {
 .project-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 /* Ensure mobile responsiveness */
 @media (max-width: 768px) {
   .project-item {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
@@ -275,6 +278,7 @@ p {
   }
 
   .project-item {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
