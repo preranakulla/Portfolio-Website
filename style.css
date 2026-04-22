@@ -15,7 +15,6 @@ body {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  min-width: 0;
   border-right: 1px solid #f0f0f0;
   position: sticky;
   top: 0;
@@ -125,6 +124,7 @@ h1 {
 
 p {
   margin-bottom: 1.2rem;
+  line-height: 1.7;
 }
 
 .intro-text {
