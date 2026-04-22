@@ -145,6 +145,14 @@ p {
   background-color: #f9f9f9;    /* Optional: adds a very light grey background */
   line-height: 1.6;             /* Improves readability */
 }
+.about-me-img {
+  width: 100%;           /* Makes it span the width of your text area */
+  max-width: 700px;      /* Keeps it aligned with your intro-text width */
+  height: auto;          /* Maintains aspect ratio */
+  border-radius: 10px;   /* Matches your other project images */
+  margin: 1.5rem 0;      /* Adds vertical spacing */
+  display: block;        /* Ensures it centers properly if you use margin: auto */
+}
 
 /* ===== Unified Project Item Layout ===== */
 .project-item {
