@@ -146,8 +146,8 @@ p {
   line-height: 1.6;             /* Improves readability */
 }
 .about-me-img {
-  width: 20%;            /* Responsive width */
-  max-width: 150px;      /* Keeps it small and tidy */
+  width: 30%;            /* Responsive width */
+  max-width: 170px;      /* Keeps it small and tidy */
   height: auto;          /* Maintains aspect ratio */
   border-radius: 10px;   /* Matches your other project images */
   display: block;        /* Required for margin: auto to work */
