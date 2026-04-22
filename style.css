@@ -7,19 +7,6 @@ body {
   min-height: 100vh;
 }
 
-/* Styling for your scientific quotes */
-.quote-block {
-  font-style: italic;           /* Makes the text italicized */
-  color: #7BAFD4;               /* Sets the text to UNC Carolina Blue */
-  text-align: center;           /* Centers the text */
-  border-left: 5px solid #7BAFD4; /* Adds a professional blue accent line */
-  padding: 20px;                /* Adds breathing room around the text */
-  margin: 30px auto;            /* Centers the entire block on the page */
-  max-width: 80%;               /* Prevents the quote from being too wide */
-  background-color: #f9f9f9;    /* Optional: adds a very light grey background */
-  line-height: 1.6;             /* Improves readability */
-}
-
 /* ===== Sidebar - Locked & Uniform ===== */
 .sidebar {
   width: 280px;
@@ -141,10 +128,23 @@ p {
 }
 
 .intro-text {
-  max-width: 70%;
+  max-width: 85%;
   line-height: 1.7;
   margin-bottom: 2rem;
   text-align: left;
+}
+
+/* Styling for your scientific quotes */
+.quote-block {
+  font-style: italic;           /* Makes the text italicized */
+  color: #7BAFD4;               /* Sets the text to UNC Carolina Blue */
+  text-align: center;           /* Centers the text */
+  border-left: 5px solid #7BAFD4; /* Adds a professional blue accent line */
+  padding: 20px;                /* Adds breathing room around the text */
+  margin: 30px auto;            /* Centers the entire block on the page */
+  max-width: 80%;               /* Prevents the quote from being too wide */
+  background-color: #f9f9f9;    /* Optional: adds a very light grey background */
+  line-height: 1.6;             /* Improves readability */
 }
 
 /* ===== Unified Project Item Layout ===== */
