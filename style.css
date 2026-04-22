@@ -305,3 +305,5 @@ p {
     flex: 0 0 48%;
     min-width: 300px;
   }
+  /* Close the media query */
+  }
